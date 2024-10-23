@@ -63,7 +63,7 @@
     .section2 .title .title__text {font-size: 13vw; line-height: 100px;}
 }
 @media screen and (max-width: 480px) {
-    .section2 .title .title__text {font-size: 13vw; line-height: 60px;}
+    .section2 .title .title__text {font-size: 13vw; line-height: 80px;}
 }
 
 /*section3 page*/
