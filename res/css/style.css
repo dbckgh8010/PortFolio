@@ -1,0 +1,167 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+@media screen and (max-width: 1280px) {
+    html, body {overflow-x: hidden;}
+}
+
+@font-face {
+    font-family: 'Nanum Pen Script';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../font/NanumPenScript-Regular.woff') format('woff');
+}
+
+/*header page*/
+.header .header__wrap {position: fixed; display: flex; justify-content: space-between; align-items: center; width: 100%; height: 100px; padding: 0 100px; z-index: 100;}
+.header .header__wrap .logo__link {display: flex; text-align: center; font-size: 26px; font-weight: 800; color: #727ff8; letter-spacing: -1.5px;}
+.header .clock {display: flex; flex-direction: column; align-items: center; color: #b3bafc;}
+.header .clock .day {line-height: 30px; font-size: 20px;}
+.header .clock .time {text-align: center; font-size: 38px; line-height: 40px; color: #727ff8;}
+
+/**/
+@media screen and (max-width: 1280px) {
+    .header .header__wrap {height: 70px; padding: 0 40px;}
+    .header .header__wrap .logo__link {font-size: 20px; letter-spacing: -1px;}
+    .header .clock .day {font-size: 18px;}
+    .header .clock .time {font-size: 30px; font-weight: 900;}
+}
+@media screen and (max-width: 768px){
+    .header .clock .day {line-height: 30px; font-size: 15px;}
+    .header .clock .time {font-size: 20px; line-height: 40px; color: #727ff8;}
+}
+@media screen and (max-width: 480px) {
+    .header .header__wrap {padding: 0 10px;}
+}
+
+
+/*section1 loading page*/
+.section1 {position: fixed; width: 100%; background:rgb(0, 0, 0, 0); backdrop-filter: blur(20px); z-index: 101;}
+.section1 .loading__page{display: flex; justify-content: center; align-items: center; max-width: 1280px; height: 100vh; margin: 0 auto;}
+.section1 .loading__circle {position: relative; border-top: 7px solid #2b3ff5; border-radius: 50%; width: 600px; height: 600px; animation: rotate 2s linear infinite;}
+.section1 .loading__page .loading {display: flex; flex-direction: column; text-align: center; position: absolute; color: #fff; font-size: 48px;}
+/*section1 effect*/
+@keyframes rotate {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}
+
+/**/
+@media screen and (max-width: 480px) {
+    .section1 .loading__circle {width: 300px; height: 300px;}
+    .section1 .loading__page .loading {font-size: 30px;}
+}
+
+/*section2 page*/
+.section2 .bg__video {position: absolute; top: 0; left: 0; height: 100vh; width: 100%; z-index: -1;}
+.section2 .bg__video .video__content {height: 100vh; width: 100%; object-fit: cover;}
+.section2 .title {display: flex; flex-direction: column; justify-content: center; padding: 0 100px; width: 100%; height: 100vh; text-align: left; color: #727ff8;}
+.section2 .title .title__text {font-size: 10vw; font-weight: 900; line-height: 300px; overflow: hidden; opacity: 0;}
+
+/**/
+@media screen and (max-width: 1280px) {
+    .section2 .title {padding: 0 40px;}
+    .section2 .title .title__text {line-height: 150px;}
+}
+@media screen and (max-width: 768px) {
+    .section2 .title .title__text {line-height: 100px;}
+}
+@media screen and (max-width: 480px) {
+    .section2 .title .title__text {line-height: 60px;}
+}
+
+/*section3 page*/
+.section3 {display: flex; height: 100vh; background: rgb(19, 21, 31);}
+.section3 .inner {display: flex; height: 100%; margin: 0 200px; padding: 200px 0;}
+.section3 .inner .inner__list {display: flex; flex-direction: column; color: #fff;}
+.section3 .inner .inner__list .main__text {font-size: 100px;}
+.section3 .inner .inner__list .sub__text {padding-top: 100px; font-size: 30px; font-weight: 500; line-height: 70px;}
+
+/**/
+@media screen and (max-width: 1280px) {
+    .section3 .inner {margin: 0 20px; padding: 20px 0;}
+}
+@media screen and (max-width: 768px) {
+    .section3 .inner {margin: 0 20px; padding: 20px 0;}
+    .section3 .inner .inner__list .main__text {font-size: 70px;}
+    .section3 .inner .inner__list .sub__text {font-size: 20px; line-height: 50px;}
+}
+
+/*section4 page(work)*/
+.section4 {position: relative; display: flex; flex-direction: column; height: 100vh;}
+.section4 .name {padding: 100px;}
+.section4 .title {position: absolute; font-size: 48px; color: #fff;}
+.section4 .swiper {width: 100%; height: 100%; padding: 50px 0;}
+.section4 .swiper .swiper-wrapper {display: flex; align-items: center;}
+.section4 .swiper-slide {position: relative; background-position: center; background-size: cover; width: 700px; height: 600px;}
+.section4 .swiper-slide img {display: block; width: 100%; height: 100%; -webkit-box-reflect: below 1px linear-gradient(transparent,transparent, #0002, #0004);}
+.section4 .swiper-slide .infor {position: absolute; display: flex; flex-direction: column; width: 100%; height: 100%; top: 0; left: 0; padding: 20px;}
+.section4 .swiper-slide .infor .number {font-size: 30px; font-weight: 900;}
+.section4 .swiper-slide .infor .title {width: 550px; padding-top: 350px;}
+.section4 .swiper-slide .infor .title .title__name {font-size: 50px; font-weight: 900; color: #000000; padding: 20px 0;}
+.section4 .swiper-slide .infor .title .skill__list {display: flex; width: 100%; font-size: 20px; color: #000; gap: 0.5em;}
+.section4 .swiper-slide .infor .title .skill__list .gauge {font-weight: 700;}
+.section4 .swiper-slide .infor .title p {padding-top: 10px; font-size: 20px; color: #727ff8; font-weight: 900;}
+.section4 .swiper-slide .infor .title p span {font-size: 25px; color: #ff6060;}
+.section4 .swiper-slide .infor .title .link {display: flex; font-size: 20px; padding-top: 20px; color: #000; gap: 2em;}
+.section4 .swiper-slide .infor .title .link .title__page {display: inline-block; height: 40px; line-height: 35px; font-weight: 900; color: #000000; padding: 0 20px; border: 2px solid #727ff8; border-radius: 30px;}
+.section4 .swiper-slide .infor .title .link .github__page {display: inline-block; height: 40px; line-height: 35px; padding: 0 20px; border: 2px solid #ffc400; border-radius: 30px;}
+.section4 .swiper-slide .infor .title .link .title__page:hover {background-color: #929dff;}
+.section4 .swiper-slide .infor .title .link .github__page:hover {background-color: #fcdd7a;}
+/*section4 배경*/
+.section4 .bg__video {position: absolute; height: 100vh; width: 100%; z-index: -1;}
+.section4 .bg__video .video__content {height: 100vh; width: 100%; object-fit: cover;}
+
+/**/
+@media screen and (max-width:768px){
+    .section4 .name {padding: 0;}
+    .section4 .swiper-slide {width: 500px; height: 400px;}
+    .section4 .swiper-slide .infor .number {font-size: 20px; font-weight: 900;}
+    .section4 .swiper-slide .infor .title {width: 400px; padding-top: 10px;}
+    .section4 .swiper-slide .infor .title .title__name {font-size: 40px; font-weight: 900; color: #000000; padding-top: 150px;}
+    .section4 .swiper-slide .infor .title .skill__list {display: flex; width: 100%; font-size: 15px; font-weight: 900; color: #000; gap: 0.5em; padding-top: 15px;}
+    .section4 .swiper-slide .infor .title .skill__list .gauge {font-weight: 700;}
+    .section4 .swiper-slide .infor .title p {padding-top: 10px; font-size: 18px; color: #727ff8; font-weight: 900;}
+    .section4 .swiper-slide .infor .title p span {font-size: 20px; color: #ff6060;}
+    .section4 .swiper-slide .infor .title .link .title__page {display: inline-block; height: 40px; line-height: 35px; font-size: 15px; font-weight: 900; color: #000000; padding: 0 20px; border: 2px solid #727ff8; border-radius: 30px;}
+}
+@media screen and (max-width:500px){
+    .section4 .name {padding: 0;}
+    .section4 .swiper-slide {width: 350px; height: 250px;}
+    .section4 .swiper-slide .infor .number {font-size: 20px; font-weight: 900;}
+    .section4 .swiper-slide .infor .title {width: 300px; padding-top: 20px;}
+    .section4 .swiper-slide .infor .title .title__name {font-size: 30px; font-weight: 900; color: #000000; padding-top: 20px;}
+    .section4 .swiper-slide .infor .title .skill__list {display: flex; width: 100%; font-size: 13px; font-weight: 900; color: #000; gap: 0.5em; padding-top: 15px;}
+    .section4 .swiper-slide .infor .title .skill__list .gauge {font-weight: 700;}
+    .section4 .swiper-slide .infor .title p {padding-top: 10px; font-size: 18px; color: #727ff8; font-weight: 900;}
+    .section4 .swiper-slide .infor .title p span {font-size: 20px; color: #ff6060;}
+    .section4 .swiper-slide .infor .title .link .title__page {display: inline-block; height: 40px; line-height: 35px; font-size: 15px; font-weight: 900; color: #000000; padding: 0 20px; border: 2px solid #727ff8; border-radius: 30px;}
+}
+
+/*section5 page*/
+.footer .contain {display: flex; flex-direction: column; padding: 200px 100px; background: rgb(19, 21, 31);}
+.footer .contain h2 {font-size: 100px; color: #fff; padding: 30px 30px;}
+.footer .contain .infor {display: flex; width: 100%;}
+.footer .contain .infor .left {padding: 30px; width: 50%;}
+.footer .contain .infor .left .email {margin: 50px 0; font-size: 24px; color: #fff;}
+.footer .contain .infor .left .sns {display: flex; height: 100px;}
+.footer .contain .infor .left .sns img {width: 100px; height: 100px; margin-right: 30px;}
+.footer .contain .infor .right {display: flex; justify-content: center; width: 50%;}
+.footer .contain .infor .right .open_kakao img {width: 300px; height: 300px;}
+
+/**/
+@media screen and (max-width: 1280px){
+    .footer .contain {padding: 20px 10px;}
+    .footer .contain h2 {font-size: 30px;}
+    .footer .contain .infor {flex-direction: column;}
+    .footer .contain .infor .left {width: 100%;}
+    .footer .contain .infor .right {width: 100%; padding: 0 30px;}
+    .footer .contain .infor .right .open_kakao img {width: 200px; height: 200px;}
+}
+@media screen and (max-width: 768px){
+    .footer .contain {padding: 20px 10px;}
+    .footer .contain h2 {font-size: 30px;}
+    .footer .contain .infor {flex-direction: column;}
+    .footer .contain .infor .left {width: 100%;}
+    .footer .contain .infor .right {width: 100%; padding: 0 30px;}
+    .footer .contain .infor .right .open_kakao img {width: 200px; height: 200px;}
+}
+@media screen and (max-width: 486px){
+    .footer .contain h2 {font-size: 25px;}
+}   
