@@ -16,7 +16,7 @@ $(function() {
             var min = dateInfo.getMinutes();
             var sec = dateInfo.getSeconds();
             var year = dateInfo.getFullYear();
-            var month = dateInfo.getMonth();
+            var month = dateInfo.getMonth() + 1;
             var date = dateInfo.getDate();
             var daysOfWeek = ["일", "월", "화", "수", "목", "금", "토"];
             var dayOfweek = daysOfWeek[dateInfo.getDay()];
